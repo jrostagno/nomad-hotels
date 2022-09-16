@@ -7,8 +7,9 @@ import api from "../api";
 import Hoteles from "../components/Hoteles/Hoteles";
 import Layout from "../components/Layout/Layout";
 import Slogan from "../components/Slogan/Slogan";
+import { HomeType, HotelData } from "../Types/types";
 
-const Home: NextPage = ({ hotels }) => {
+const Home: NextPage<HomeType> = ({ hotels }) => {
   const [list, setList] = useState([]);
 
   useEffect(() => {

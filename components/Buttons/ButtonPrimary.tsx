@@ -1,11 +1,9 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
 
-interface ButtonProps {
-  children: React.ReactNode;
-}
-
-const ButtonPrimary: React.FC<ButtonProps> = ({ children, ...props }) => {
+const ButtonPrimary: React.FC<
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+> = ({ children, ...props }) => {
   return (
     <Button
       bgColor="primary"

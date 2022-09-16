@@ -1,4 +1,4 @@
-import { Heading, Highlight, Stack, Text } from "@chakra-ui/react";
+import { Highlight, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Slogan = () => {

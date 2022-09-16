@@ -1,7 +1,7 @@
 import { Box, Heading } from "@chakra-ui/react";
 
 import React from "react";
-import { ReactNode } from "react";
+import { HeroIconTypes } from "../../Types/types";
 
 export const HeroIcon: React.FC<HeroIconTypes> = ({ children, ...props }) => {
   return (

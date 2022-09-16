@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 export type Links = { name: string; hostelInfo?: typeHostelInfoProps }[];
 
@@ -75,4 +75,8 @@ export interface DrawerCardsTypes {
 
 export interface HeroIconTypes {
   children: ReactNode;
+}
+
+export interface HomeType {
+  hotels: HotelData;
 }

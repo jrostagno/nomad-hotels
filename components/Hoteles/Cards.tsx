@@ -3,43 +3,10 @@ import React from "react";
 import { VscLocation } from "react-icons/vsc";
 
 import Slider from "react-slick";
+import { settings } from "../../lib/headerConst";
 import { Hotels, HotelTypes } from "../../Types/types";
 
 const Cards: React.FC<Hotels> = ({ hotels, ...props }) => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
     <Box {...props}>
       <Slider {...settings}>
