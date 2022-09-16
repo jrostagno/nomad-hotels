@@ -73,10 +73,6 @@ export interface DrawerCardsTypes {
   price: number;
 }
 
-export interface HeroIconTypes {
-  children: ReactNode;
-}
-
 export interface HomeType {
   hotels: HotelData;
 }

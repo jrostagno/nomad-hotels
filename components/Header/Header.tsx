@@ -1,7 +1,13 @@
-import { Box, Flex, Image, Stack, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { options, userInfo } from "../../lib/headerConst";
 import { HeaderProps } from "../../Types/types";
-import { HeroIcon } from "./HeroIcon";
 
 import NavBar from "./NavBar";
 import UserInformation from "./UserInformation";
@@ -39,9 +45,11 @@ const Header: React.FC<HeaderProps> = ({ list, ...props }) => {
           isOpenDropDown={isOpen}
         ></NavBar>
       </Flex>
-      <HeroIcon fontSize="xxl" fontWeight="bold" color="white" lineheight="10">
-        Tu tribu <br /> te espera
-      </HeroIcon>
+      <Box marginTop={40} marginLeft={20} marginRight={20}>
+        <Heading fontSize="xxl" fontWeight="bold" color="white" lineHeight="10">
+          Tu tribu <br /> te espera
+        </Heading>
+      </Box>
       <Box marginLeft={20} marginTop={20}>
         {userInfo.map((info) => (
           <UserInformation
