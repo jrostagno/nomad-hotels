@@ -16,7 +16,7 @@ const UserInformation: React.FC<UserInformationTypes> = ({
       <Text fontSize="xs" color="white" opacity={30}>
         {position}
       </Text>
-      <Link href="#">
+      <Link display={{ base: "none", sm: "block" }} href="#">
         <Text
           fontSize="sm"
           fontWeight="semibold"
@@ -27,6 +27,7 @@ const UserInformation: React.FC<UserInformationTypes> = ({
           {title}
         </Text>
         <Text
+          display={{ base: "none", sm: "block" }}
           fontSize="sm"
           fontWeight="semibold"
           lineHeight="base"
@@ -37,7 +38,7 @@ const UserInformation: React.FC<UserInformationTypes> = ({
         </Text>
       </Link>
 
-      <Box>
+      <Box display={{ base: "none", sm: "block" }}>
         <svg
           width="36"
           height="1"
@@ -46,6 +47,17 @@ const UserInformation: React.FC<UserInformationTypes> = ({
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect width="36" height="1" fill="white" />
+        </svg>
+      </Box>
+      <Box display={{ base: "block", sm: "none" }}>
+        <svg
+          width="10"
+          height="2"
+          viewBox="0 0 10 2"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="9.47368" height="2" rx="1" fill="white" />
         </svg>
       </Box>
     </Stack>

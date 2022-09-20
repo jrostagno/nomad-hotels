@@ -1,4 +1,12 @@
-import { Box, Center, Highlight, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Highlight,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
 import { Divider } from "@chakra-ui/react";
 
@@ -15,19 +23,27 @@ const DrawerCards: React.FC<DrawerCardsTypes> = ({
 }) => {
   return (
     <>
-      <Box
+      <Stack
+        direction={{ base: "column", sm: "row" }}
         display="flex"
         maxW="full"
-        justifyContent="space-between"
+        spacing={{ base: 5, sm: 6 }}
         overflow="hidden"
       >
-        <Image minWidth="252px" src={image} alt="image" />
+        <Image
+          minWidth="252px"
+          maxHeight={{ base: "200px", sm: "full" }}
+          src={image}
+          alt="image"
+        />
 
         <Box
           marginLeft="20px"
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
+          gap={5}
+          marginTop="30px"
         >
           <Image
             maxHeight="35px"
@@ -66,10 +82,16 @@ const DrawerCards: React.FC<DrawerCardsTypes> = ({
             </Highlight>
           </Text>
           <Box>
-            <ButtonPrimary>Reservar ahora</ButtonPrimary>
+            <Button
+              bgColor="primary"
+              color="white"
+              width={{ base: "full", sm: "auto" }}
+            >
+              Reservar ahora
+            </Button>
           </Box>
         </Box>
-      </Box>
+      </Stack>
       <Center height="50px">
         <Divider orientation="horizontal" />
       </Center>

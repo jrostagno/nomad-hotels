@@ -76,3 +76,7 @@ export interface DrawerCardsTypes {
 export interface HomeType {
   hotels: HotelData;
 }
+
+export interface MenuHamburgerType {
+  options: { name: string }[];
+}

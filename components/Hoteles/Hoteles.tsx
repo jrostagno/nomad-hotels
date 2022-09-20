@@ -5,19 +5,28 @@ import Cards from "./Cards";
 
 const Hoteles: React.FC<Hotels> = ({ hotels }) => {
   return (
-    <Box minHeight="900px">
-      <Box bgColor="terciary" maxWidth="95%" borderRadius={10}>
-        <Stack spacing={12} zIndex="3" padding={20}>
+    <Box minHeight={{ base: "full", sm: "900px" }}>
+      <Box
+        bgColor="terciary"
+        maxWidth={{ base: "full", md: "95%" }}
+        borderRadius={10}
+      >
+        <Stack spacing={12} zIndex="3" padding={{ base: 8, sm: 20 }}>
           <Stack spacing={10} paddingLeft="38px">
             <Heading
-              fontSize="5xl"
+              fontSize={{ base: "4xl", sm: "5xl" }}
               letterSpacing="tight"
+              paddingY={8}
               lineHeight="6"
               fontWeight="semibold"
             >
               Hoteles que son hogares
             </Heading>
-            <Text fontSize="xl" fontWeight="light" lineHeight="8">
+            <Text
+              fontSize={{ base: "2xl", sm: "xl" }}
+              fontWeight="light"
+              lineHeight={{ base: "2em", sm: "tall" }}
+            >
               Siéntete parte de la tribu en un ambiente diseñado para que <br />{" "}
               experimentes el viaje que va a cambiar algo en ti.
             </Text>

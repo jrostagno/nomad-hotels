@@ -11,7 +11,7 @@ const Cards: React.FC<Hotels> = ({ hotels, ...props }) => {
     <Box {...props}>
       <Slider {...settings}>
         {hotels.map((hotel: HotelTypes, i: number) => (
-          <Box key={i} paddingX="35px">
+          <Box key={i} paddingX={{ base: "8px", sm: "35px" }}>
             <Box
               maxWidth="900px"
               height="auto"
@@ -25,7 +25,9 @@ const Cards: React.FC<Hotels> = ({ hotels, ...props }) => {
                   blur: "2px",
                 }}
                 width="100%"
-                height="auto"
+                height={{ base: "300px", sm: "auto" }}
+                borderRadius="5px"
+                objectFit="cover"
                 alt="nav"
                 src={hotel.image}
               />
@@ -38,14 +40,14 @@ const Cards: React.FC<Hotels> = ({ hotels, ...props }) => {
                 }}
                 position="absolute"
                 zIndex={3}
-                width="368px"
-                minHeight="130px"
+                width={{ base: "85%", md: "55%" }}
+                minHeight="30%"
                 backdropFilter="blur(4px)"
                 padding="18px"
                 borderRadius="16px"
                 bgColor={hotel.bgcolor}
-                bottom="35px"
-                right="-25px"
+                bottom={{ base: "10px", md: "35px" }}
+                right={{ base: "5", md: "-25px" }}
               >
                 <Stack>
                   <Box>
@@ -55,14 +57,13 @@ const Cards: React.FC<Hotels> = ({ hotels, ...props }) => {
                         color="#FFFFFF"
                         letterSpacing="wider"
                         fontSize="md"
-                        lineHeight="7"
                         fontWeight="normal"
                       >
                         {hotel.location}
                       </Text>
                     </Flex>
                     <Image
-                      marginTop={5}
+                      marginTop={{ base: 2, md: 5 }}
                       maxWidth="130px"
                       maxHeight="40px"
                       alt="info"
@@ -70,6 +71,7 @@ const Cards: React.FC<Hotels> = ({ hotels, ...props }) => {
                     />
                     {hotel.description !== "" && (
                       <Box
+                        display={{ base: "none", md: "block" }}
                         borderBottom="2px solid #879825"
                         paddingTop="5px"
                         paddingBottom="10px"
@@ -87,7 +89,11 @@ const Cards: React.FC<Hotels> = ({ hotels, ...props }) => {
                       </Box>
                     )}
                     {hotel.services.length > 0 && (
-                      <Stack spacing={2} marginTop={1}>
+                      <Stack
+                        display={{ base: "none", sm: "block" }}
+                        spacing={2}
+                        marginTop={1}
+                      >
                         <Text
                           color="#FFFFFF"
                           paddingTop="5px"

@@ -9,6 +9,7 @@ const theme = extendTheme({
     heading: `'canada-type-gibson', sans-serif`,
     body: `'canada-type-gibson', sans-serif`,
   },
+
   colors: {
     primary: "#3D63A9",
     secondary: "#3D63A9",
@@ -18,6 +19,9 @@ const theme = extendTheme({
   fontSizes: {
     sm: "0.9375rem",
     xs: "0.8125rem",
+    lg: "1.25rem",
+    xl: "2rem",
+    xlg: "2.5rem",
     xxl: "6.875rem",
   },
   letterSpacings: {
@@ -28,6 +32,7 @@ const theme = extendTheme({
   },
   lineHeights: {
     6: "3.5rem",
+    7: "4.25rem",
     9: "6.125rem",
     10: "6.87rem",
   },

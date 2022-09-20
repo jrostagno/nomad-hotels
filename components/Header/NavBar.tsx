@@ -1,3 +1,4 @@
+import { CalendarIcon } from "@chakra-ui/icons";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,11 +13,11 @@ import {
   DrawerHeader,
   DrawerOverlay,
   useDisclosure,
+  Button,
 } from "@chakra-ui/react";
 
 import React from "react";
 import { NavBarProps } from "../../Types/types";
-import ButtonPrimary from "../Buttons/ButtonPrimary";
 import DrawerCards from "../Drawer/DrawerCards";
 import DropDownLink from "../DropDown/DropDownLink";
 
@@ -26,6 +27,7 @@ const NavBar: React.FC<NavBarProps> = ({
   onOpenDropDown,
   isOpenDropDown,
   list,
+  ...props
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -40,15 +42,19 @@ const NavBar: React.FC<NavBarProps> = ({
       }}
       separator=""
       bgColor="white"
-      padding="8px"
-      borderRadius="16px"
+      padding={{ base: 0, sm: "8px" }}
+      borderRadius={{ base: "16px", lg: "10px" }}
+      {...props}
     >
       {list &&
         list.length > 0 &&
         list.map((el, index) => {
           if (el.name === "Experimenta") {
             return (
-              <BreadcrumbItem key={index}>
+              <BreadcrumbItem
+                display={{ base: "none", lg: "block" }}
+                key={index}
+              >
                 <DropDownLink
                   options={options}
                   buttonName={el.name}
@@ -61,7 +67,10 @@ const NavBar: React.FC<NavBarProps> = ({
           }
           if (el.name === "English") {
             return (
-              <BreadcrumbItem key={index}>
+              <BreadcrumbItem
+                display={{ base: "none", lg: "flex" }}
+                key={index}
+              >
                 <Center height="40px">
                   <Divider orientation="vertical" />
                 </Center>
@@ -81,36 +90,31 @@ const NavBar: React.FC<NavBarProps> = ({
           if (el.name === "Reservar") {
             return (
               <BreadcrumbItem key={index}>
-                <ButtonPrimary onClick={onOpen}>
+                <Button
+                  bgColor={{ base: "white", lg: "primary" }}
+                  color={{ base: "primary", lg: "white" }}
+                  onClick={onOpen}
+                >
                   <Flex alignItems="center" flexGrow="full" gap={2}>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M7 3H8.5V5H15.5V3H17V5H21V9.5V11V21H3V11V9.5V5H7V3ZM15.5 6.5V8H17V6.5H19.5V9.5H4.5V6.5H7V8H8.5V6.5H15.5ZM4.5 11V19.5H19.5V11H4.5Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <CalendarIcon />
                     Reservar
                   </Flex>
-                </ButtonPrimary>
+                </Button>
                 <Drawer
-                  size="lg"
+                  size={{ base: "full", sm: "lg" }}
                   isOpen={isOpen}
                   placement="right"
                   onClose={onClose}
                 >
                   <DrawerOverlay />
                   <DrawerContent>
-                    <DrawerCloseButton />
+                    <DrawerCloseButton
+                      paddingX="5"
+                      marginTop={{ base: 4, sm: 6 }}
+                      marginRight={{ base: 2, sm: 3 }}
+                    />
                     <DrawerHeader
-                      fontSize="5xl"
+                      fontSize={{ base: "xl", sm: "5xl" }}
                       lineHeight="tight"
                       fontWeight="semibold"
                       letterSpacing="wide"
@@ -138,7 +142,7 @@ const NavBar: React.FC<NavBarProps> = ({
           }
 
           return (
-            <BreadcrumbItem key={index}>
+            <BreadcrumbItem display={{ base: "none", lg: "block" }} key={index}>
               <BreadcrumbLink
                 fontSize="sm"
                 letterSpacing="wider"

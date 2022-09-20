@@ -4,28 +4,40 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <Stack padding={20} spacing={20}>
+      <Stack
+        justifyContent="center"
+        marginTop={32}
+        padding={{ base: 0, sm: 20 }}
+        spacing={20}
+      >
         <Image alt="nav" src="/divisor.png" />
         <Stack>
           <Stack
+            direction={{ base: "column", sm: "row" }}
             justifyContent="space-between"
+            spacing={20}
             alignItems="center"
-            paddingRight={20}
-            direction="row"
+            paddingRight={{ base: 0, sm: 20 }}
           >
-            <Stack gap={5}>
-              <Image alt="nav" maxWidth="130px" src="/logofooter.svg" />
+            <Stack gap={5} justifyContent="center">
+              <Image
+                alt="nav"
+                margin={{ base: "auto", sm: "0" }}
+                maxWidth="130px"
+                src="/logofooter.svg"
+              />
 
               <Text
                 fontSize="sm"
                 lineHeight="base"
                 letterSpacing="wider"
                 fontWeight="normal"
+                textAlign={{ base: "center", sm: "left" }}
               >
                 Here we should have a few words about <br /> what and who the
                 company is. This should <br /> serve well for SEO purposes.
               </Text>
-              <Flex gap={10}>
+              <Flex justifyContent="center" gap={10}>
                 <svg
                   width="22"
                   height="15"
@@ -83,18 +95,18 @@ const Footer = () => {
               <Text
                 fontSize="md"
                 letterSpacing="wider"
-                lineHeight="7"
+                lineHeight={{ base: "taller", sm: "7" }}
                 fontWeight="normal"
               >
                 T:(054) 1234567 <br />
                 E:info@nomadperu.com.pe
               </Text>
             </Stack>
-            <Stack>
+            <Stack display={{ base: "none", md: "block" }}>
               <Text
                 fontSize="md"
                 letterSpacing="wider"
-                lineHeight="7"
+                lineHeight={{ base: "taller", lg: "7" }}
                 fontWeight="normal"
               >
                 Alojate
@@ -102,7 +114,7 @@ const Footer = () => {
               <Text
                 fontSize="md"
                 letterSpacing="wider"
-                lineHeight="7"
+                lineHeight={{ base: "taller", lg: "7" }}
                 fontWeight="normal"
               >
                 Co-Work
@@ -110,7 +122,7 @@ const Footer = () => {
               <Text
                 fontSize="md"
                 letterSpacing="wider"
-                lineHeight="7"
+                lineHeight={{ base: "taller", lg: "7" }}
                 fontWeight="normal"
               >
                 Experimenta
@@ -118,7 +130,7 @@ const Footer = () => {
               <Text
                 fontSize="md"
                 letterSpacing="wider"
-                lineHeight="7"
+                lineHeight={{ base: "taller", lg: "7" }}
                 fontWeight="normal"
               >
                 Unete
@@ -126,7 +138,7 @@ const Footer = () => {
               <Text
                 fontSize="md"
                 letterSpacing="wider"
-                lineHeight="7"
+                lineHeight={{ base: "taller", lg: "7" }}
                 fontWeight="normal"
               >
                 Inversores
@@ -136,13 +148,18 @@ const Footer = () => {
         </Stack>
       </Stack>
       <Box
+        marginTop={{ base: "30px", sm: "0" }}
         display="flex"
         justifyContent="center"
         alignItems="center"
         bgColor="primary"
-        padding={10}
+        padding={{ base: 8, sm: 10 }}
       >
-        <Heading fontSize="7xl" fontWeight="light" color="white">
+        <Heading
+          fontSize={{ base: "xl", sm: "7xl" }}
+          fontWeight="light"
+          color="white"
+        >
           Gracias por scrollear :)
         </Heading>
       </Box>

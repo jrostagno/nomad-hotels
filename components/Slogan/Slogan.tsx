@@ -5,23 +5,23 @@ const Slogan = () => {
   return (
     <Stack
       minHeight="900px"
-      padding={40}
+      padding={{ base: 0, sm: 40 }}
       justifyContent="center"
       textAlign="center"
     >
       <Text
         fontWeight="light"
-        letterSpacing="tighter"
-        fontSize="7xl"
-        lineHeight="9"
+        letterSpacing={{ base: "tight", sm: "tighter" }}
+        fontSize={{ base: "xlg", md: "7xl" }}
+        lineHeight={{ base: "6", sm: "9" }}
       >
         Un hogar con espacio para coworkear,
       </Text>
       <Text
         fontWeight="light"
-        letterSpacing="tighter"
-        fontSize="7xl"
-        lineHeight="9"
+        letterSpacing={{ base: "tight", sm: "tighter" }}
+        fontSize={{ base: "xlg", md: "7xl" }}
+        lineHeight={{ base: "6", sm: "9" }}
       >
         <Highlight
           query="aventuras locales"
@@ -38,9 +38,9 @@ const Slogan = () => {
       </Text>
       <Text
         fontWeight="light"
-        letterSpacing="tighter"
-        fontSize="7xl"
-        lineHeight="9"
+        letterSpacing={{ base: "tight", sm: "tighter" }}
+        fontSize={{ base: "xlg", md: "7xl" }}
+        lineHeight={{ base: "6", sm: "9" }}
       >
         y personas increíbles.
       </Text>
