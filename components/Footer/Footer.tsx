@@ -5,6 +5,8 @@ const Footer = () => {
   return (
     <>
       <Stack
+        height="100vh"
+        scrollSnapAlign="start"
         justifyContent="center"
         marginTop={32}
         padding={{ base: 0, sm: 20 }}

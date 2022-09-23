@@ -5,7 +5,11 @@ import Cards from "./Cards";
 
 const Hoteles: React.FC<Hotels> = ({ hotels }) => {
   return (
-    <Box minHeight={{ base: "full", sm: "900px" }}>
+    <Box
+      scrollSnapAlign="start"
+      // height="100vh"
+      minHeight={{ base: "full", sm: "900px" }}
+    >
       <Box
         bgColor="terciary"
         maxWidth={{ base: "full", md: "95%" }}

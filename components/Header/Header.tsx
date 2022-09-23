@@ -20,6 +20,8 @@ const Header: React.FC<HeaderProps> = ({ list, ...props }) => {
   return (
     <Box
       minHeight="800px"
+      scrollSnapAlign="start"
+      height="100vh"
       bgRepeat="no-repeat"
       width="full"
       bgImage={{ base: "url('/mobileheader.png')", sm: "url('/IMG.png')" }}
@@ -28,11 +30,13 @@ const Header: React.FC<HeaderProps> = ({ list, ...props }) => {
       {...props}
     >
       <Stack
-        spacing={40}
+        spacing="80"
         margin={{ base: 4, sm: 10, md: 20 }}
         justifyContent="space-between"
       >
         <Flex
+          position="fixed"
+          width="90%"
           direction="row"
           justifyContent="space-between"
           alignItems="center"

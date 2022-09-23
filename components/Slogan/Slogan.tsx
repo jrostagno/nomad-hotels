@@ -4,6 +4,8 @@ import React from "react";
 const Slogan = () => {
   return (
     <Stack
+      height="100vh"
+      scrollSnapAlign="start"
       minHeight="900px"
       padding={{ base: 0, sm: 40 }}
       justifyContent="center"

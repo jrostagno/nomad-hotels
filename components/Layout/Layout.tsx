@@ -6,7 +6,12 @@ import Header from "../Header/Header";
 
 const Layout: React.FC<LayoutProps> = ({ list, children }) => {
   return (
-    <Box display="flex" flexDirection="column" minHeight="screen">
+    <Box
+      scrollSnapType="y proximity"
+      overflowY="scroll"
+      flexDirection="column"
+      height="100vh"
+    >
       <Header list={list}></Header>
       <Box flexGrow={1}>{children}</Box>
       <Footer />
